@@ -17,4 +17,11 @@ describe("polygon", function() {
         ]);
     });
 
+    it("counts intersections with a ray", function() {
+        let poly = polygon([[-1, -1], [1, -1], [0, 1]]);
+        expect(polygon([
+            [-1, -1], [1, -1], [0, 1]
+        ]).intersections([0, 1])).to.equal(1);
+    });
+
 });
