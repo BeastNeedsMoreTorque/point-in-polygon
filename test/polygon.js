@@ -8,4 +8,8 @@ describe("polygon", function() {
         expect(poly.surrounds([0, 0])).to.be.true;
     });
 
+    it("translates a polygon", function() {
+        expect(polygon([]).translate([0, 0]).points()).to.deep.equal([]);
+    });
+
 });

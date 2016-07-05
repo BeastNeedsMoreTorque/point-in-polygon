@@ -11,9 +11,12 @@ export function polygon(_points) {
 
     let intersections = (ray) => 1;
 
+    let points = () => _points;
+
     return {
         surrounds,
         translate,
-        intersections
+        intersections,
+        points
     };
 }
