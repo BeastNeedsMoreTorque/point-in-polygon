@@ -1,3 +1,8 @@
+function countIntersections(poly, point) {
+    return 1;
+}
+
 export function pointInPoly(poly, point) {
-    return true;
+    let intersections = countIntersections(poly, point);
+    return !!(intersections % 2);
 }
