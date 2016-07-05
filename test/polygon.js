@@ -10,6 +10,11 @@ describe("polygon", function() {
 
     it("translates a polygon", function() {
         expect(polygon([]).translate([0, 0]).points()).to.deep.equal([]);
+        expect(polygon([
+            [0, 0], [5, -5]
+        ]).translate([1, 1]).points()).to.deep.equal([
+            [1, 1], [6, -4]
+        ]);
     });
 
 });

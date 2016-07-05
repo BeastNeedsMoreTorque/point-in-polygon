@@ -6,7 +6,7 @@ export function polygon(_points) {
     };
 
     let translate = ([x, y]) => {
-        return polygon(_points);
+        return polygon(_points.map(p => [p[0] + x, p[1] + y]));
     };
 
     let intersections = (ray) => 1;
