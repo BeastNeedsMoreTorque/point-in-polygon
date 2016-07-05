@@ -24,4 +24,15 @@ describe("polygon", function() {
         ]).intersections([0, 1])).to.equal(1);
     });
 
+    it("creates lines for a polygon", function() {
+        let lines = polygon([
+            [-1, -1], [1, -1], [0, 1]
+        ]).lines();
+        expect(lines.map((line) => line.points())).to.deep.equal([
+            [[-1, -1], [1, -1]],
+            [[1, -1], [0, 1]],
+            [[0, 1], [-1, -1]]
+        ]);
+    });
+
 });

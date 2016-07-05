@@ -19,7 +19,10 @@ export function line(a, b) {
         return t1 >= 0 && (t2 >= 0 && t2 <= 1);
     };
 
+    let points = () => [a, b];
+
     return {
-        intersects
+        intersects,
+        points
     };
 }

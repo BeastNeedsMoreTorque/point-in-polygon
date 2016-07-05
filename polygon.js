@@ -18,7 +18,19 @@ export function polygon(_points) {
     let points = () => _points;
 
     let lines = () => {
-        return [line([-1, 1], [1, 1])];
+        if ((!_points) || !_points.length) {
+            return [];
+        }
+
+        let last = _points[0];
+        let pairs = _points.slice(1).map((point) => {
+            let segment = line(last, point);
+            last = point;
+            return segment;
+        });
+        pairs.push(line(_points[_points.length - 1], _points[0]));
+
+        return pairs;
     }
 
     return {
