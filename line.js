@@ -5,7 +5,7 @@ export function line(a, b) {
     }
 
     function dot(v1, v2) {
-        return v1[0] * v2[0] + v1[1] + v2[1];
+        return v1[0] * v2[0] + v1[1] * v2[1];
     }
 
     let intersects = (ray) => {
