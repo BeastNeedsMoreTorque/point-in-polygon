@@ -1,8 +1,5 @@
-function countIntersections(poly, point) {
-    return 1;
-}
+import { polygon } from "./polygon";
 
 export function pointInPoly(poly, point) {
-    let intersections = countIntersections(poly, point);
-    return !!(intersections % 2);
+    return polygon(poly).surrounds(point);
 }
